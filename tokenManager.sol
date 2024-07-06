@@ -20,7 +20,7 @@ contract TokenManager is Ownable, ReentrancyGuard {
     IERC20 public usdt;
     IIPFS internal ipfs; 
     uint256 public dailyInterestRate = 2; // 2% daily interest rate
-    uint256 public signupBonus = 100 * 10**6; // Signup bonus in custom token
+    uint256 public signupBonus = 100 * 10**18; // Signup bonus in custom token
     uint256 public tokenToUsdtRate = 16; // 1 Custom Token = 0.016 USDT
 
     struct User {

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract ECash is Ownable {
     string public name = "ECash";
     string public symbol = "ECash";
-    uint8 public decimals = 6;
+    uint8 public decimals = 18;
     uint256 public totalSupply;
 
     mapping(address => uint256) private balances;
@@ -16,7 +16,7 @@ contract ECash is Ownable {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
     constructor() Ownable(msg.sender) {
-        _mint(msg.sender, 1000000000 * 10**decimals);
+        _mint(msg.sender, 10000000000000 * 10**decimals);
     }
 
     function balanceOf(address account) external view returns (uint256) {
